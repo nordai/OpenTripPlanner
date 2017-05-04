@@ -68,7 +68,8 @@ otp.config = {
      *       applicable
      *       
      */
-
+        
+/*
     baseLayers: [
         {
             name: 'Stamen Terrain',
@@ -102,6 +103,45 @@ otp.config = {
             attribution : 'Map data and tiles © OpenStreetMap contributors'
         }
     ],
+    */
+    
+    baseLayers: [
+		{
+			name: 'Alto contrasto',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+		{
+			name: 'Satellite',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+		{
+			name: 'Light',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+		{
+			name: 'Terreno',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+		{
+			name: 'Strade',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+		{
+			name: 'Satellite/Strade',
+			tileUrl: 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibm9yZGFpIiwiYSI6ImtCWWpvY00ifQ.E9g3YhLqDFGkdXx7pKnCWw',
+			attribution: 'Map tiles by <a href="http://mapbox.com">MapBox</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+		},
+        {
+            name: 'OpenStreetMap',
+            tileUrl: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            attribution : 'Map data and tiles © OpenStreetMap contributors'
+        }
+	],
     
 
     /**
@@ -110,21 +150,21 @@ otp.config = {
      * properties, when set, override that behavioir.
      */
      
-    // initLatLng : new L.LatLng(<lat>, <lng>),
-    // initZoom : 14,
+     initLatLng : new L.LatLng(40.282, 9.097),
+     initZoom : 8,
     // minZoom : 10,
     // maxZoom : 20,
     
     /* Whether the map should be moved to contain the full itinerary when a result is received. */
-    zoomToFitResults    : false,
+    zoomToFitResults    : true,
 
     /**
      * Site name / description / branding display options
      */
 
-    siteName            : "My OTP Instance",
-    siteDescription     : "An OpenTripPlanner deployment.",
-    logoGraphic         : 'images/otp_logo_darkbg_40px.png',
+    siteName            : "GeoNue Transit BETA",
+    siteDescription     : "Prototipo per il calcolo percorsi sui trasporti sardi.",
+    logoGraphic         : 'images/otp_logo_geonue.png',
     // bikeshareName    : "",
     //Enable this if you want to show frontend language chooser
     showLanguageChooser : true,
@@ -151,7 +191,7 @@ otp.config = {
         {
             id : 'planner',
             className : 'otp.modules.multimodal.MultimodalPlannerModule',
-            defaultBaseLayer : 'Stamen Terrain',
+            defaultBaseLayer : 'Strade',
             isDefault: true
         },
         {
@@ -302,7 +342,7 @@ otp.config.modes = {
         "TRAM,RAIL,SUBWAY,FUNICULAR,GONDOLA,WALK"       : _tr("Rail Only"), 
     //TRANSLATORS: Travel by: mode of transport (Used in selection in Travel
     //Options widgets)
-        "AIRPLANE,WALK"       : _tr("Airplane Only"),
+     //   "AIRPLANE,WALK"       : _tr("Airplane Only"),
     //TRANSLATORS: Travel by: mode of transport (Used in selection in Travel
     //Options widgets)
         "BICYCLE"             : _tr('Bicycle Only'),

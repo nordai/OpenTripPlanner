@@ -54,13 +54,13 @@ otp.locale.English = {
     infoWidgets : [
             {
                 title: 'About',
-                content: '<p>About this site</p>',
+                content: '<p><br /><b>GeoNue Transit</b> è un progetto realizzato da <b>Nordai s.r.l</b> su piattaforma <a href="http://www.geonue.com">GeoNue</a>.<br/><br />Questa è una versione dimostrativa con gli <b>OpenData dei trasporti della Regione Sardegna.</b> Basato su <a href="http://www.opentripplanner.org/">OpenTripplanner</a>, utilizza come base cartografica i dati di <a href="https://www.openstreetmap.org">OpenStreetMap.</p>'
                 //cssClass: 'otp-contactWidget',
-            },
+            }/*,
             {
                 title: 'Contact',
                 content: '<p>Comments? Contact us at...</p>'
-            },
+            },*/
     ],
 
 

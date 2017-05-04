@@ -165,47 +165,47 @@ body {
 /* Branding (top bar) */
 
 #branding {
-  height: 2.25em;
+  height: 2em;
   overflow: visible;
   position: relative;
   z-index: 100;
   color: #fff;
 
-  background-color: #444;
+  background-color: #186687;
 
-  background-image: linear-gradient(bottom, rgb(68,68,68) 0%, rgb(102,102,102) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(68,68,68) 0%, rgb(102,102,102) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(68,68,68) 0%, rgb(102,102,102) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(68,68,68) 0%, rgb(102,102,102) 100%);
-  background-image: -ms-linear-gradient(bottom, rgb(68,68,68) 0%, rgb(102,102,102) 100%);
+  background-image: linear-gradient(bottom, rgb(36,115,149) 0%, rgb(21,98,131) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(36,115,149) 0%, rgb(21,98,131) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(36,115,149) 0%, rgb(21,98,131) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(36,115,149) 0%, rgb(21,98,131) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(36,115,149) 0%, rgb(21,98,131) 100%);
 
   background-image: -webkit-gradient(
   	linear,
   	left bottom,
   	left top,
-  	color-stop(0, rgb(68,68,68)),
-  	color-stop(1, rgb(102,102,102))
+  	color-stop(0, rgb(36,115,149)),
+  	color-stop(1, rgb(21,98,131))
   );
 }
 
 @media only screen and (min-width: 768px) {
   #branding {
-    height: 4em;
+    height: 3.8em;
   }
 }
 
 /* Module Selector */
 
 #otp_moduleSelector {
-  font-size: 11px;
+  font-size: 6px;
   margin: 6px 10px;
 }
 
 @media only screen and (min-width: 768px) {
 
   #otp_moduleSelector {
-    font-size: 16px;
-    margin: 13px 20px;
+    font-size: 12px;
+    margin: 16px 50px;
   }
 }
 
@@ -353,8 +353,8 @@ body {
 }
 
 #site-title {
-  font-size: 1.25em;
-  margin: .325em .25em;
+  font-size: 1em;
+  margin-top: 1.3em!important;
   float: left;
   padding-left: 5px;
 }
@@ -401,9 +401,9 @@ body {
 #main-menu a {
   display: block;
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
-  line-height: 1.75;
+  line-height: 1.8;
   text-decoration: none;
   padding: 0 0.75em;
   position: relative;
@@ -413,7 +413,7 @@ body {
           border-radius: 3px;
 }
 #main-menu a:hover {
-  background-color: #333;
+  background-color: #08374b;
 }
 
 
